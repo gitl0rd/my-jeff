@@ -1,0 +1,13 @@
+.Container {
+    padding: 32px;
+}
+
+.MovieList {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 16px;
+}
+
+.MovieCard {
+    border: solid 1px black;
+}

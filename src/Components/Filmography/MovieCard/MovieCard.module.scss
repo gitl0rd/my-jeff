@@ -1,0 +1,9 @@
+.Card {
+    border: 1px solid lightgray;
+    box-shadow: 0 0 2px grey;
+    border-radius: 54x;
+
+    .Text {
+        text-overflow: ellipsis;
+    }
+}
