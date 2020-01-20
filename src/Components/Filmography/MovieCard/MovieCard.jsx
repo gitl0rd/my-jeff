@@ -5,7 +5,12 @@ const MovieCard = ({title, img, char, overview}) => {
 
     return (
         <div className={styles.Card}>
-            <p className={styles.Text}>{title}</p>
+            <div className={styles.Title}>{title}</div>
+            <div className={styles.Img}>
+                <img src={'https://image.tmdb.org/t/p/w300_and_h450_bestv2/' + img} />
+            </div>
+            <div className={styles.Character}>{char}</div>
+            {/*<p className={styles.Text}>{overview}</p>*/}
         </div>
     )
 }

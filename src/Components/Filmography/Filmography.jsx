@@ -28,7 +28,7 @@ const Filmography = ({}) => {
         <div className={styles.Container}>
             Movies
             <div className={styles.MovieList}>
-                {movies.map((m) => <MovieCard  title={m.title}/>)}
+                {movies.map((m) => <MovieCard  title={m.title} img={m.poster_path} char={m.character}/>)}
             </div>
         </div>
     )

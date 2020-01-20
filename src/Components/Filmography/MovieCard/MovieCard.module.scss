@@ -1,9 +1,40 @@
 .Card {
-    border: 1px solid lightgray;
-    box-shadow: 0 0 2px grey;
-    border-radius: 54x;
+    box-shadow: 0 0 4px black;
+    padding: 8px;
+    background-color: rgb(69, 69, 69);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
 
-    .Text {
-        text-overflow: ellipsis;
+.Text {
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    line-height: 1.8em;
+}
+
+.Title {
+    @extend .Text;
+    font-weight: bold;
+    color: white;
+    font-size: 1fr;
+    max-height: 3.6em;
+    min-height: 3.6em;
+}
+
+.Img {
+    display: block;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
     }
+}
+
+.Character {
+    @extend .Text;
+    color: lightgray;
+    max-height: 1.8em;
+    min-height: 1.8em;
 }
