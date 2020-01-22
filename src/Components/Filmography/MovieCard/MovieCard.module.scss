@@ -1,7 +1,7 @@
 .Card {
-    box-shadow: 0 0 4px black;
-    padding: 8px;
-    background-color: rgb(69, 69, 69);
+    //box-shadow: 0 0 4px black;
+    padding: 0px 8px;
+    background-color: rgb(245, 245, 245);
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -17,10 +17,10 @@
 .Title {
     @extend .Text;
     font-weight: bold;
-    color: white;
-    font-size: 1fr;
-    max-height: 3.6em;
-    min-height: 3.6em;
+    color: black;
+    font-size: 18px;
+    max-height: 1.8em;
+    //min-height: 3.6em;
 }
 
 .Img {
@@ -34,7 +34,8 @@
 
 .Character {
     @extend .Text;
-    color: lightgray;
+    color: black;
+    font-size: 16px;
     max-height: 1.8em;
-    min-height: 1.8em;
+    //min-height: 1.8em;
 }

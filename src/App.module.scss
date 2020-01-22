@@ -1,0 +1,10 @@
+.StickyDiv {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid lightgrey;
+  width: 100%;
+  margin: -8px 0px;
+  padding: 8px;
+}

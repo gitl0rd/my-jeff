@@ -26,7 +26,7 @@ const Filmography = ({}) => {
 
     return(
         <div className={styles.Container}>
-            Movies
+            <h2>Movies.</h2>
             <div className={styles.MovieList}>
                 {movies.map((m) => <MovieCard  title={m.title} img={m.poster_path} char={m.character}/>)}
             </div>
