@@ -5,7 +5,32 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+    animation: fadein 0.5s;
+    transition: box-shadow 0.2s ease, border 0.2s ease, margin 0.1s linear;
 }
+
+.Card:hover {
+    margin: -8px;
+    border: 1px solid black;
+    box-shadow: 0 0 4px black;
+    transition: box-shadow 0.2s ease, border 0.2s ease, margin 0.1s linear;
+    cursor: pointer;
+    //animation: spinny 0.5s linear infinite;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes spinny {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
 .Text {
     text-overflow: ellipsis;
@@ -24,7 +49,8 @@
 }
 
 .Img {
-    display: block;
+    display: flex;
+    justify-content: center;
 
     img {
         max-width: 100%;

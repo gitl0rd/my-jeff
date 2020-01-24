@@ -2,17 +2,23 @@ import React from 'react';
 import styles from './App.module.scss';
 import { BrowserRouter as Router, Route} from 'react-router-dom'
 
-import Home from './Components/Home/Home'
-import Movies from './Components/Filmography/Filmography';
+import Home from './Components/Pages/Home/Home'
+import Movies from './Components/Pages/Filmography/Filmography';
 
 function App() {
-  return (
-    <Router>
-        <h1 className={styles.StickyDiv}>Jeff</h1>
-        <Route path="/" component={Home} />
+    return (
+      <Router>
+        <div className={styles.StickyHeader}>
+          <h1 >Jeff</h1>
+          <div className={styles.Links}>
+            <a href='/'>Home</a>
+            <a href='/movies'>Movies</a>
+          </div>
+        </div>
+        <Route path="/" exact component={Home} />
         <Route path="/movies" component={Movies} />
     </Router>
-  );
+    );
 }
 
 export default App;

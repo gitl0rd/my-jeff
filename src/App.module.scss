@@ -1,10 +1,48 @@
-.StickyDiv {
+.StickyHeader {
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
   position: sticky;
   top: 0;
   background: white;
   border-bottom: 1px solid lightgrey;
   width: 100%;
-  margin: -8px 0px;
+  //margin: -8px 0px;
   padding: 8px;
+  box-sizing: border-box;
+
+  h1 {
+    margin: 0px;
+  }
+}
+
+$a-tags: 'a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';
+
+.Links {
+  display: flex;
+  
+  a {
+    font-weight: bold;
+    margin: 8px;
+    text-decoration: none;
+  }
+
+  #{$a-tags} {
+    color: black;
+  }
+  #{$a-tags-hover} {
+    color: blue;
+    animation: spinny 0.5s linear infinite;
+  }
+}
+
+@keyframes spinny {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

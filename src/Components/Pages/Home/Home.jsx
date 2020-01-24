@@ -1,6 +1,6 @@
 import React from 'react';
 
-import APITEST from './APITEST'
+import APITEST from '../../Home/APITEST'
 
 const Home = () => {
     return(
