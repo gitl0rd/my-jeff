@@ -15,8 +15,10 @@ function App() {
             <a href='/movies'>Movies</a>
           </div>
         </div>
-        <Route path="/" exact component={Home} />
-        <Route path="/movies" component={Movies} />
+        <div className={styles.MainEvent}>
+          <Route path="/" exact component={Home} />
+          <Route path="/movies" component={Movies} />
+        </div>
     </Router>
     );
 }

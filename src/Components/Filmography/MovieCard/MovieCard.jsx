@@ -1,7 +1,7 @@
 import React from 'react'
 import styles  from './MovieCard.module.scss'
 
-const MovieCard = ({title, img, char, overview}) => {
+const MovieCard = ({title, img, char, id, desc, click}) => {
     const getImage = () => {
         const goteem = <img src={'https://image.tmdb.org/t/p/w300_and_h450_bestv2/' + img} />
         if (img) {
@@ -12,7 +12,7 @@ const MovieCard = ({title, img, char, overview}) => {
     }
 
     return (
-        <div className={styles.Card}>
+        <div className={styles.Card} onClick={() => click({t: title, i: img, c: char, d: desc})}>
             <div className={styles.Title}>{title}</div>
             <div className={styles.Img}>
                 {/*<img src={'https://image.tmdb.org/t/p/w300_and_h450_bestv2/' + img} />*/}

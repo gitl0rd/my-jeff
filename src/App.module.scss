@@ -38,6 +38,10 @@ $a-tags-hover: 'a:active, a:hover';
   }
 }
 
+.MainEvent {
+  box-sizing: border-box;
+}
+
 @keyframes spinny {
   from {
     transform: rotate(0deg);
