@@ -14,7 +14,7 @@ const APITEST = () => {
             params: {
                 query: `
                     {
-                        datatown(id:1) {
+                        datatown(movie_id: "616037") {
                             thing
                             anotherthing
                         }
@@ -23,7 +23,7 @@ const APITEST = () => {
             }
         }).then((r) => {
             console.log(r)
-            setResponse(r.data.data.datatown)
+            setResponse(r.data.data.datatown[0])
         })
     }, [])
     

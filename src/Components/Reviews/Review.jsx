@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ReviewForm from './ReviewForm/ReviewForm'
+
 import styles from './Review.module.scss'
 
 const Review = ({id, info, add, view, closeClick}) => {
@@ -22,7 +24,12 @@ const Review = ({id, info, add, view, closeClick}) => {
         }
         return (
             <div className={styles.Left}>
-                {getImage()}
+                <div>
+                    <h1>{infoObj.t}</h1>
+                    <h3>{infoObj.c}</h3>
+                </div>
+                {/*getImage()*/}
+                <p>{infoObj.d}</p>
             </div>
         )
     }
@@ -30,7 +37,7 @@ const Review = ({id, info, add, view, closeClick}) => {
 
     const renderRight = () => {
         if (add) {
-
+            return <ReviewForm id={id} />
         } else if (view) {
 
         } else {
@@ -45,7 +52,7 @@ const Review = ({id, info, add, view, closeClick}) => {
                 <div className={styles.Close} onClick={closeClick}>x</div>
                 {renderLeft()}
                 <div className={styles.Right}>
-                    Right side
+                    {renderRight()}
                 </div>
                 
             </div>

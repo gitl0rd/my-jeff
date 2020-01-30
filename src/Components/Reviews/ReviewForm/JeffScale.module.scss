@@ -1,0 +1,28 @@
+.Scale {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    height: 3em;
+}
+
+.Head {
+    box-sizing: border-box;
+    width: 3em;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.Inactive {
+    opacity: 0.4
+}
+
+.Active {
+    opacity: 1;
+}
+
+.Rating {
+    margin-left: 1em;
+}
